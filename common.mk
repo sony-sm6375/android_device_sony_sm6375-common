@@ -357,5 +357,9 @@ PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink
 
+# XperiaParts
+PRODUCT_PACKAGES += \
+    XperiaParts
+
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/sony/sm6375-common/sm6375-common-vendor.mk)
