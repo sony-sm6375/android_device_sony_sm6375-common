@@ -46,7 +46,9 @@ TARGET_KERNEL_SOURCE := kernel/sony/sm6375
 TARGET_KERNEL_NO_GCC := true
 
 # Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
+TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
