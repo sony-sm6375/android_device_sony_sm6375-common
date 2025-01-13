@@ -324,6 +324,9 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/assd                 0660    nfc         nfc
 /dev/pn553                0660    nfc         nfc
 
+# SE
+/dev/p73                  0660   secure_element     secure_element
+
 # UIO devices
 /dev/uio0                 0660   system     system
 /dev/uio1                 0660   system     system
