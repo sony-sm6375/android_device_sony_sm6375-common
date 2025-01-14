@@ -334,3 +334,6 @@ PRODUCT_PACKAGES += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/sony/sm6375-common/sm6375-common-vendor.mk)
+
+# REMOVEME
+PRODUCT_PACKAGES += SonyPDX214FrameworksRes SonyPDX214SystemUIRes CarrierConfigResCommon SonySagamiFrameworksResCommon SonySagamiSettingsProviderOverlayCommon SonySagamiSettingsResCommon SonySagamiSystemUIResCommon SonySagamiTelephonyResCommon WifiResCommon
