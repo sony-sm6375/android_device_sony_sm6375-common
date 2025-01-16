@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- How much the content in the divider is inset from the window bounds when resting. Used to
+         calculate the bounds of the stacks-->
+    <dimen name="docked_stack_divider_insets">39.0dip</dimen>
+</resources>
