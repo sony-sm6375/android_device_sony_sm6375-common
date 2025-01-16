@@ -11,3 +11,13 @@ service tad /vendor/bin/tad /dev/block/bootdevice/by-name/TA 0,16
     group oem_2997 root
     socket tad stream 0660 system oem_2993
     class core
+
+service vendor.camera-provider-2-4 /vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
+    override
+    interface android.hardware.camera.provider@2.4::ICameraProvider legacy/0
+    class hal
+    user cameraserver
+    group audio camera input drmrpc oem_2907 oem_2993
+    ioprio rt 4
+    capabilities SYS_NICE
+    task_profiles CameraServiceCapacity MaxPerformance
