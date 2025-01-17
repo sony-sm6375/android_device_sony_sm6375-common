@@ -91,8 +91,10 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
+TARGET_KERNEL_CLANG_VERSION := r522817
+TARGET_KERNEL_CONFIG := vendor/holi-qgki_defconfig diffconfig/common.config diffconfig/pdx225.config
 TARGET_KERNEL_SOURCE := kernel/sony/sm6375
-TARGET_KERNEL_NO_GCC := true
+#TARGET_KERNEL_NO_GCC := true
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load))
