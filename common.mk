@@ -135,6 +135,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SonyEuicc
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-euiccgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-euiccgoogle.xml
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
@@ -250,6 +253,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
+
+# QTI fwk-detect
+PRODUCT_PACKAGES += \
+    libvndfwk_detect_jni.qti.vendor # Needed by CNE app
 
 # Sensors
 PRODUCT_PACKAGES += \
