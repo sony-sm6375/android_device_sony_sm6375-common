@@ -136,6 +136,10 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
+# Security
+BOOT_SECURITY_PATCH := 2025-02-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 include hardware/sony/sepolicy/qti/SEPolicy.mk
