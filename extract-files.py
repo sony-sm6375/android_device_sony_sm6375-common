@@ -54,6 +54,10 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(b'oem/etc/thermal-engine.conf', b'odm/etc/thermal-engine.conf'),
     'vendor/etc/msm_irqbalance.conf': blob_fixup()
         .regex_replace('IGNORED_IRQ=19,21,38$', 'IGNORED_IRQ=19,21,38,209,218'),
+    'vendor/etc/wfdconfig.xml': blob_fixup()
+        .regex_replace('<M4Enable>0</M4Enable>', '<M4Enable>1</M4Enable>')
+        .regex_replace('<UIBCValid>0</UIBCValid>', '<UIBCValid>1</UIBCValid>')
+        .regex_replace('<USB>1</USB>', '<USB>3</USB>'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
 }  # fmt: skip
